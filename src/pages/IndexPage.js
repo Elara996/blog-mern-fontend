@@ -26,12 +26,10 @@ export default function IndexPage() {
 
   return (
     <div className="index-page-container">
-            {loading && <p className="loading-message">Loading posts...</p>}   
-       {" "}
+      {loading && <p className="loading-message">Loading posts...</p>}
       {!loading &&
         posts.length > 0 &&
         posts.map((post) => <Post key={post._id} {...post} />)}
-           {" "}
       {!loading && posts.length === 0 && (
         <p className="no-posts-message">
           No posts found. Let's create one now!
